@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>NightCrawler: A Mulberry Gang Series</title>
+  <meta name="description" content="NightCrawler - A spooky mystery adventure book for kids aged 9–12.">
+  <meta name="keywords" content="NightCrawler, spooky kids book, Mulberry Gang, haunted house mystery, children's horror">
+  <meta name="author" content="K.P. Gillbert">
+  <meta property="og:title" content="NightCrawler: A Mulberry Gang Series">
+  <meta property="og:description" content="They thought it was just a dare... A chilling mystery for kids aged 9–12.">
+  <meta property="og:image" content="book-cover.png">
+  <link rel="icon" type="image/x-icon" href="favicon.ico">
+  <link rel="stylesheet" href="styles.css"/>
+</head>
+<body>
+
+  <nav>
+    <div class="nav-container">
+      <a href="#" class="logo">
+      <img src="MG_logo.png" alt="Home" class="logo-icon" />
+      Mulberry Gang
+    </a>
+      <div class="menu-toggle" id="menu-toggle">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+      <div class="nav-links" id="nav-links">
+        <a href="#about">About</a>
+        <a href="#chapter">Chapter</a>
+        <a href="#resources">Resources</a>
+        <a href="#contact">Contact</a>
+      </div>
+    </div>
+  </nav>
+
+  <div class="menu-overlay" id="menu-overlay"></div>
+
+  <header>
+  <div class="hero-content">
+    <div class="hero-text">
+    <h1>NightCrawler</h1>
+    <p class="tagline">They thought it was just a dare... A chilling mystery adventure for ages 9–12</p>
+    <div class="buttons">
+      <a href="https://www.amazon.com/dp/6180054495">Buy Now</a>
+      <a href="#chapter" class="secondary">Preview First Chapter</a>
+    </div>
+      </div>
+    <div class="hero-image">
+      <img src="book-cover.png" alt="NightCrawler Book Cover" />
+    </div>
+  </div>
+</header>
+
+  <section class="description" id="about">
+    <h2>About the Book</h2>
+    <p>When 10-year-old Kevin takes a dare to enter a haunted house, he stumbles upon a terrifying secret—and something that's been waiting in the dark.<br><br>Perfect for fans of <em>Goosebumps</em> & <em>Coraline</em>.</p>
+  </section>
+
+  <section id="chapter">
+    <h2>Preview First Chapter</h2>
+    <p>Get a taste of the adventure. Read the opening pages and meet Kevin and the gang before the mystery begins.</p>
+    <a class="cta-button" href="chapter-one.html" target="_blank">Read Chapter One</a>
+  </section>
+
+  <section id="resources">
+    <h2>Teacher & Parent Resources</h2>
+    <p>Download some Wallpapers for the phone and the Mulberry Gang Contract to get students engaged.</p>
+    <a class="cta-button" href="resources.html" target="_blank">Download Resources</a>
+  </section>
+
+  <section id="contact">
+    <h2>Contact the Author</h2>
+    <p>Interested in scheduling a school visit, virtual reading, or have a question? Reach out below.</p>
+    <a class="cta-button" href="mailto:contact@mulberrygangbooks.com">Email Us</a>
+  </section>
+
+  <footer>
+    <p>&copy; 2025 K.P. Gillbert – Mulberry Gang Series</p>
+  </footer>
+
+  <script>
+    const menuToggle = document.getElementById('menu-toggle');
+    const navLinks = document.getElementById('nav-links');
+    const overlay = document.getElementById('menu-overlay');
+
+    menuToggle.addEventListener('click', () => {
+      navLinks.classList.toggle('active');
+      overlay.classList.toggle('active');
+      document.body.classList.toggle('menu-open');
+      menuToggle.classList.toggle('active');
+    });
+
+    overlay.addEventListener('click', () => {
+      navLinks.classList.remove('active');
+      overlay.classList.remove('active');
+      document.body.classList.remove('menu-open');
+      menuToggle.classList.remove('active');
+    });
+
+    document.querySelectorAll('.nav-links a').forEach(link => {
+      link.addEventListener('click', () => {
+        navLinks.classList.remove('active');
+        overlay.classList.remove('active');
+        document.body.classList.remove('menu-open');
+        menuToggle.classList.remove('active');
+      });
+    });
+  </script>
+
+</body>
+</html>
